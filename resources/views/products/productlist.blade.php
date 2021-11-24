@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Our Products List</h1>
+<p>Our Product Categories is {}</p>
 </body>
 </html>

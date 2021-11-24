@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\WebFrontend\AboutController;
+use App\Http\Controllers\Webfrontend\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,13 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', function () {
-    return view('about');
-});
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('about', [AboutController::class,'AboutPage']);
 
-Route::get('ourproducts', function () {
-    return view('productlist.productlist');
-});
+Route::get('/contact', [ContactController::class,'ContactPage']);
+
+Route::get('/category/{category_id}/product/{product_id}', [ProductController::class,'ProductPage']);
