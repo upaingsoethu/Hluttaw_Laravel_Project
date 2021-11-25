@@ -24,6 +24,5 @@ Route::get('about', [AboutController::class,'AboutPage']);
 
 Route::get('/contact', [ContactController::class,'ContactPage']);
 
-Route::get('/category/{category_id}/product/{product_id}', [ProductController::class,'ProductPage']);
 
 Route::get('/products', [ProductController::class,'ProductPage']);
