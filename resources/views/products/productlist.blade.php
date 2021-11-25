@@ -7,7 +7,20 @@
     <title>Product List</title>
 </head>
 <body>
-<h1>Our Products List</h1>
-<p>Our Product Categories is {}</p>
+<h1>For Loop Style Code</h1>
+<ul>
+    @for ($i = 0; $i<count($products);$i++)
+    <li>{{$products[$i]}}</li>
+    @endfor
+
+</ul>
+
+<h1>Foreach Loop Style Code</h1>
+<ul>
+    @foreach ($products as $key => $product )
+    <li>{{$key}} - {{$product}}</li>        
+    @endforeach
+</ul>
+
 </body>
 </html>
