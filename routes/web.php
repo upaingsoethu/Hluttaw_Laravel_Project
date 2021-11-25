@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\WebFrontend\AboutController;
 use App\Http\Controllers\Webfrontend\ProductController;
@@ -26,3 +27,5 @@ Route::get('/contact', [ContactController::class,'ContactPage']);
 
 
 Route::get('/products', [ProductController::class,'ProductPage']);
+
+Route::post('api/book',[BookController::class,'GetBook']);
