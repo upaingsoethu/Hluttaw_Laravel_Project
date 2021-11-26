@@ -26,6 +26,6 @@ Route::get('about', [AboutController::class,'AboutPage']);
 Route::get('/contact', [ContactController::class,'ContactPage']);
 
 
-Route::get('/products', [ProductController::class,'ProductPage']);
+Route::get('/products', [ProductController::class,'ProductPage'])->middleware("checkage");
 
 Route::post('api/book',[BookController::class,'GetBook']);
