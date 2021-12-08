@@ -15,4 +15,9 @@ class ProductController extends Controller
             'products'=> $products_list
         ]);
     }
+    function ProductDetails($book_id)
+    {
+        return "Your Book ID is {$book_id}";
+    }
+
 }
