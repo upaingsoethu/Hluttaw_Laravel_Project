@@ -21,11 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('about', [AboutController::class,'AboutPage']);
+Route::get('/about', [AboutController::class,'AboutPage']);
 
 Route::get('/contact', [ContactController::class,'ContactPage']);
 
 
-Route::get('/products', [ProductController::class,'ProductPage'])->middleware("checkage");
+Route::get('/products', [ProductController::class,'ProductPage']);
 
 Route::post('api/book',[BookController::class,'GetBook']);

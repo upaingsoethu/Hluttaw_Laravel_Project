@@ -16,7 +16,7 @@ class CheckAge
      */
     public function handle(Request $request, Closure $next)
     {
-        if(5>10)
+        if(10>5)
         {
             return redirect("/");
         }
